@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.config";
 import { signOut } from "firebase/auth";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { faSignInAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
   const [user] = useAuthState(auth);
@@ -41,11 +43,11 @@ const Header = () => {
           <Nav>
             {user ? (
               <button className="btn" onClick={handleSignOut}>
-                Sign Out
+                Sign Out <FontAwesomeIcon icon={faSignOutAlt} />
               </button>
             ) : (
               <Nav.Link eventKey={2} as={Link} to="/login">
-                Login
+                Login <FontAwesomeIcon icon={faSignInAlt} />
               </Nav.Link>
             )}
           </Nav>

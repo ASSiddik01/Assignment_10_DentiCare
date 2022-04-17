@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const [agree, setAgree] = useState(false);
   const navigate = useNavigate();
 
   const navigateLogin = (event) => {
@@ -37,18 +38,28 @@ const Register = () => {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
               <Form.Check
-                name="trems"
+                className={agree ? "text-primary" : "theme_color"}
+                onClick={() => setAgree(!agree)}
                 type="checkbox"
-                label="Agree to our condition"
+                label="Agree to our terms &amp; condition"
               />
             </Form.Group>
-            <Button variant="outline-themeButton" type="submit">
+            <Button
+              disabled={!agree}
+              variant={agree ? "outline-primary" : "outline-themeButton"}
+              type="submit"
+            >
               Register
             </Button>
           </Form>
           <p className="mt-2">
             Already have an account{" "}
-            <span onClick={navigateLogin} className="text-primary cursor_pointer">Please login</span>{" "}
+            <span
+              onClick={navigateLogin}
+              className="text-primary cursor_pointer"
+            >
+              Please login
+            </span>{" "}
           </p>
           <SocialLogin></SocialLogin>
         </Col>

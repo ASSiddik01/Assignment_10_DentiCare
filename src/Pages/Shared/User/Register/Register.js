@@ -6,11 +6,13 @@ import auth from "../../../../firebase.config";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import Loading from "../../Loading/Loading";
 
+import "react-toastify/dist/ReactToastify.css";
+
 const Register = () => {
   const [agree, setAgree] = useState(false);
   const navigate = useNavigate();
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth,{sendEmailVerification: true});
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
   const navigateLogin = (event) => {
     navigate("/login");
@@ -22,16 +24,11 @@ const Register = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
     createUserWithEmailAndPassword(email, password);
-
-    console.log(name, email, password);
     setAgree(false);
   };
 
   if (loading) {
     return <Loading></Loading>;
-  }
-  if (user) {
-    console.log("Inside register", user);
   }
 
   let errorElement;

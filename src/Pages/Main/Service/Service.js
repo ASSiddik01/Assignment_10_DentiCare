@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Card, Col } from "react-bootstrap";
-import './Service.css'
+import { Link } from "react-router-dom";
+import "./Service.css";
 
 const Service = ({ service }) => {
   const { name, price, img, description } = service;
@@ -20,7 +21,10 @@ const Service = ({ service }) => {
               ? description.slice(0, 150) + "..."
               : description}
           </Card.Text>
-          <Button variant="outline-themeButton">Checkout Now</Button>{' '}
+          <Link to={'/checkout'}>
+            {" "}
+            <Button variant="outline-themeButton">Checkout Now</Button>{" "}
+          </Link>
         </Card.Body>
       </Card>
     </Col>

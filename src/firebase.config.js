@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDe0hoXXHWcqGTV0dLQhIEbPjTLNEU19_g",
-  authDomain: "denti-care-fe8eb.firebaseapp.com",
-  projectId: "denti-care-fe8eb",
-  storageBucket: "denti-care-fe8eb.appspot.com",
-  messagingSenderId: "584449969557",
-  appId: "1:584449969557:web:f38839ec2147c34dfb3a9c"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase

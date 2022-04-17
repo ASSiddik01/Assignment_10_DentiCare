@@ -6,7 +6,7 @@ const Loading = () => {
   return (
     <Container>
       <Row>
-        <Col md={6} className="mx-auto">
+        <Col md={12} className="text-center mt-5">
           <Spinner animation="border" variant="primary" />
         </Col>
       </Row>

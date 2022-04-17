@@ -3,10 +3,24 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import "./Header.css";
 import logo from "../../../images/logo.png";
 import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.config";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+
+  const handleSignOut = () => {
+    signOut(auth);
+  };
   return (
-    <Navbar collapseOnSelect expand="lg" sticky="top" bg="light" variant="light">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      sticky="top"
+      bg="light"
+      variant="light"
+    >
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img height={50} src={logo} alt="" />
@@ -14,15 +28,26 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto ">
-            <Nav.Link as={Link} to="services">Services</Nav.Link>
-            <Nav.Link as={Link} to="blogs">Blogs</Nav.Link>
-            <Nav.Link as={Link} to="about">About</Nav.Link>
+            <Nav.Link as={Link} to="services">
+              Services
+            </Nav.Link>
+            <Nav.Link as={Link} to="blogs">
+              Blogs
+            </Nav.Link>
+            <Nav.Link as={Link} to="about">
+              About
+            </Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link as={Link} to="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} as={Link} to="login">
-              Login
-            </Nav.Link>
+            {user ? (
+              <button className="btn" onClick={handleSignOut}>
+                Sign Out
+              </button>
+            ) : (
+              <Nav.Link eventKey={2} as={Link} to="/login">
+                Login
+              </Nav.Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -19,6 +19,9 @@ const Login = () => {
   const navigateRegister = (event) => {
     navigate("/register");
   };
+  const navigateResetPassword = (event) => {
+    navigate("/reset");
+  };
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -59,7 +62,7 @@ const Login = () => {
                 placeholder="Password"
               />
             </Form.Group>
-            <Button variant="outline-themeButton" type="submit">
+            <Button variant="outline-primary" type="submit">
               Login
             </Button>
           </Form>
@@ -75,7 +78,12 @@ const Login = () => {
           </p>
           <p>
             Forget Password?{" "}
-            <span className="text-primary cursor_pointer">Reset Password</span>{" "}
+            <span
+              onClick={navigateResetPassword}
+              className="text-primary cursor_pointer"
+            >
+              Reset Password
+            </span>{" "}
           </p>
           <SocialLogin></SocialLogin>
         </Col>

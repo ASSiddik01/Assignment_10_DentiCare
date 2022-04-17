@@ -49,7 +49,7 @@ const SocialLogin = () => {
         <button
           onClick={() => signInWithGoogle()}
           type="submit"
-          className="btn btn-outline-themeButton"
+          className="btn btn-outline-primary"
         >
           <img className="px-2" src={google} alt="" />
           Sign in with Google
@@ -57,7 +57,7 @@ const SocialLogin = () => {
         <button
           onClick={() => signInWithGithub()}
           type="submit"
-          className="btn btn-outline-themeButton"
+          className="btn btn-outline-primary"
         >
           <img className="px-2" src={github} alt="" />
           Sign in with Google

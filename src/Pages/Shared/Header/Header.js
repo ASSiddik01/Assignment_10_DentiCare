@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect expand="lg"variant="light">
+    <Navbar collapseOnSelect expand="lg" sticky="top" bg="light" variant="light">
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img height={50} src={logo} alt="" />

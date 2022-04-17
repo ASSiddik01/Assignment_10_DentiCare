@@ -11,8 +11,6 @@ const Services = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
-
-  console.log("inside services", services);
   return (
     <Container id="services">
       <h2 className="text-center my-5">

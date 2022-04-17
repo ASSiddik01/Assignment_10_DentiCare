@@ -40,6 +40,7 @@ const ResetPassword = () => {
                 name="email"
                 type="email"
                 placeholder="Enter email"
+                required
               />
               <Form.Text className="text-muted">
                 Type your forget account email

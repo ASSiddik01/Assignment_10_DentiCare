@@ -52,6 +52,7 @@ const Login = () => {
                 name="email"
                 type="email"
                 placeholder="Enter email"
+                required
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -60,6 +61,7 @@ const Login = () => {
                 name="password"
                 type="password"
                 placeholder="Password"
+                required
               />
             </Form.Group>
             <Button variant="outline-primary" type="submit">

@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* Base CSS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+:root {
+  --defaultColor: #fb008e;
+  --scrollTrack: #fff;
+  --stickyBg:#fff;
+  --defaultHoverColor:#f766b8;
+  --themeBg:#13b9e7;
+}
+
+::-webkit-scrollbar {
+  width: 05px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollTrack) !important;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: var(--defaultColor) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--defaultHoverColor); 
+}

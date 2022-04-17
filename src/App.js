@@ -1,10 +1,12 @@
-import logo from '../src/images/logo.png';
 import './App.css';
+import Footer from './Pages/Shared/Footer/Footer';
+import Header from './Pages/Shared/Header/Header';
 
 function App() {
   return (
-    <div className="App">
-      <img src={logo} alt="" />
+    <div>
+      <Header />
+      <Footer/>
     </div>
   );
 }

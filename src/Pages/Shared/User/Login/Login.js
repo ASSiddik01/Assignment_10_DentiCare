@@ -1,9 +1,16 @@
 import React from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import "./Login.css";
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
+  const navigateRegister = (event) => {
+    navigate("/register");
+  };
   return (
     <Container>
       <Row>
@@ -12,11 +19,19 @@ const Login = () => {
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control
+                name="email"
+                type="email"
+                placeholder="Enter email"
+              />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control
+                name="password"
+                type="password"
+                placeholder="Password"
+              />
             </Form.Group>
             <Button variant="outline-themeButton" type="submit">
               Login
@@ -24,7 +39,7 @@ const Login = () => {
           </Form>
           <p className="mt-2">
             If you are new?{" "}
-            <span className="text-primary cursor_pointer">
+            <span onClick={navigateRegister} className="text-primary cursor_pointer">
               Create an account
             </span>{" "}
           </p>

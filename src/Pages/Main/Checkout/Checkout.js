@@ -3,19 +3,13 @@ import { Container, Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-
 import { ToastContainer, toast } from "react-toastify";
-
 import "react-toastify/dist/ReactToastify.css";
-// import { useAuthState } from "react-firebase-hooks/auth";
-// import auth from "../../../firebase.config";
 
 const Checkout = () => {
-  // const [user] = useAuthState(auth);
-
   const handleOrder = (event) => {
-      event.preventDefault();
-      toast("Your order is processing");
+    event.preventDefault();
+    toast("Thank you for the booking.");
   };
 
   return (
@@ -47,7 +41,7 @@ const Checkout = () => {
               />
             </Form.Group>
             <Button variant="primary" type="submit">
-              Place Order
+              Place Booking
             </Button>
             <ToastContainer />
           </Form>

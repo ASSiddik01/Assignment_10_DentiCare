@@ -1,0 +1,10 @@
+.btn-outline-themeButton {
+    color: var(--defaultColor) !important;
+    border-color: var(--defaultColor) !important;
+}
+
+.btn-outline-themeButton:hover {
+    color: #fff !important;
+    background-color: var(--defaultColor);
+    border-color: var(--defaultColor);
+}

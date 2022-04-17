@@ -1,6 +1,9 @@
 .theme_color{
     color: var(--defaultColor);
 }
+.theme_color2{
+    color: var(--defaultColor2);
+}
 
 .theme_bg{
     background-color: var(--themeBg);

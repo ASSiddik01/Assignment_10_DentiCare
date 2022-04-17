@@ -1,0 +1,44 @@
+[
+  {
+    "id": "01",
+    "name": "Teeth Whitening",
+    "img": "https://i.ibb.co/mJcWHX1/Teeth-Whitening.jpg",
+    "description": "Teeth whitening is a simple process. Whitening products contain one of two tooth bleaches (hydrogen peroxide or carbamide peroxide). These bleaches break stains into smaller pieces, which makes the color less concentrated and your teeth brighter.",
+    "price": 100
+  },
+  {
+    "id": "02",
+    "name": "Dental Implants",
+    "img": "https://i.ibb.co/KwMR37k/Dental-Implants.jpg",
+    "description": "Dental implant surgery is a procedure that replaces tooth roots with metal, screwlike posts and replaces damaged or missing teeth with artificial teeth that look and function much like real ones.",
+    "price": 170
+  },
+  {
+    "id": "03",
+    "name": "Pediatric Dentistry",
+    "img": "https://i.ibb.co/zNKLk8n/Pediatric-Dentistry.jpg",
+    "description": "Pediatric dentists are dedicated to the oral health of children from infancy through the teen years. They have the experience and qualifications to care for a child's teeth, gums, and mouth throughout the various stages of childhood.",
+    "price": 110
+  },
+  {
+    "id": "04",
+    "name": "Cosmetic Dentistry",
+    "img": "https://i.ibb.co/4jndjVs/Cosmetic-Dentistry.jpg",
+    "description": "Cosmetic dentistry is generally used to refer to any dental work that improves the appearance (though not necessarily the functionality) of teeth, gums and/or bite. It primarily focuses on improvement in dental aesthetics in color, position, shape, size, alignment and overall smile appearance.",
+    "price": 150
+  },
+  {
+    "id": "05",
+    "name": "Periodontal Therapy",
+    "img": "https://i.ibb.co/H4gKnb2/Periodontal-Therapy.jpg",
+    "description": "Periodontal therapy is a type of conservative or non-surgical treatment for gum disease. Its goal is to control and manage periodontal diseases without the need for surgery. Ultimately, it helps restore optimal gum health, which, in turn, helps keep tooth loss at bay.",
+    "price": 50
+  },
+  {
+    "id": "06",
+    "name": "Preventive Dentistry",
+    "img": "https://i.ibb.co/cvkdf6T/Preventive-Dentistry.jpg",
+    "description": "Preventive dentistry is dental care that helps maintain good oral health. It's a combination of regular dental check-ups along with developing good habits like brushing and flossing. Taking care of your teeth starts early in childhood and extends throughout the course of your life.",
+    "price": 120
+  }
+]

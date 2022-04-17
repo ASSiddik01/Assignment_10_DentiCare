@@ -10,7 +10,7 @@ const Register = () => {
   const [agree, setAgree] = useState(false);
   const navigate = useNavigate();
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth,{sendEmailVerification: true});
 
   const navigateLogin = (event) => {
     navigate("/login");

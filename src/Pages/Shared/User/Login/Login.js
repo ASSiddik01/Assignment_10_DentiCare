@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import SocialLogin from "../SocialLogin/SocialLogin";
 import "./Login.css";
 
 const Login = () => {
@@ -17,11 +18,11 @@ const Login = () => {
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="outline-themeButton" type="submit">
               Login
             </Button>
           </Form>
-          <p>
+          <p className="mt-2">
             If you are new?{" "}
             <span className="text-primary cursor_pointer">
               Create an account
@@ -31,6 +32,7 @@ const Login = () => {
             Forget Password?{" "}
             <span className="text-primary cursor_pointer">Reset Password</span>{" "}
           </p>
+          <SocialLogin></SocialLogin>
         </Col>
       </Row>
     </Container>

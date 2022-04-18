@@ -1,10 +1,9 @@
 # Denticare
 
-## [Live Site](sitelink)
+## [Live Site](https://denti-care-fe8eb.web.app/)
 
-Click here to site preview [sitelink](sitelink)
+Click here to site preview [https://denti-care-fe8eb.web.app/](https://denti-care-fe8eb.web.app/)
 
-![picture alt](photolink "sitename")
 
 ## About site
 
@@ -19,4 +18,7 @@ Click here to site preview [sitelink](sitelink)
 </ul>
 
 
-<p>Here I use Boostrap, Firebase, React firebase hook, FontAwesome, React Router, React toast, Framework</p>
+<p>Freamwork:- Here I use Boostrap, Firebase, React firebase hook, FontAwesome, React Router, React toast, Framework</p>
+
+
+![picture alt](https://i.ibb.co/hgDhhtb/screencapture-denti-care-fe8eb-web-app-Home-2022-04-18-21-25-52.png "Denticare")

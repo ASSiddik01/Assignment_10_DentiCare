@@ -12,18 +12,18 @@ const Blogs = () => {
         </h2>
         <p>
           <span>Ans:</span> <br />{" "}
-          <span className="primary">Athentication:</span> Authenticating your
-          identity requires you to verify your credentials, such as your
-          username or user ID. Using your credentials, the system determines
-          whether you are who you claim to be. The system authenticates user
-          identities in public and private networks using login passwords.
-          <br />
           <span className="primary">Authorization:</span>The authorization
           process occurs once your identity has been successfully authenticated
           by the system, granting you access to resources such as information,
           files, databases, funds, locations, almost anything. A user's
           authorization determines how and up to what extent they can access the
           system.
+          <br />
+          <span className="primary">Athentication:</span> Authenticating your
+          identity requires you to verify your credentials, such as your
+          username or user ID. Using your credentials, the system determines
+          whether you are who you claim to be. The system authenticates user
+          identities in public and private networks using login passwords.
         </p>
       </div>
       <div className="qa">
@@ -32,8 +32,8 @@ const Blogs = () => {
           have to implement authentication?
         </h2>
         <p>
-          <span>Ans:</span> I am using firebase as a user maintain system. I
-          think, firebase is a esaest method to maintain web/mobile app user and
+          <span>Ans:</span> I am using firebase as a user maintainance system. I
+          think, firebase is a easist method to maintain web/mobile app user and
           also this is secure.
           <br />
           There have many option to implemant to authentication. Those are-

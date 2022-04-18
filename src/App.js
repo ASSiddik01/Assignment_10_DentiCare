@@ -10,6 +10,7 @@ import RequiredAuth from "./Pages/Shared/RequiredAuth/RequiredAuth";
 import Login from "./Pages/Shared/User/Login/Login";
 import Register from "./Pages/Shared/User/Register/Register";
 import ResetPassword from './Pages/Shared/User/ResetPassword/ResetPassword';
+import Blogs from './Pages/Main/Blogs/Blogs';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home></Home>} />
         <Route path="/home" element={<Home></Home>} />
         <Route path="/services" element={<Services></Services>} />
+        <Route path="/blogs" element={<Blogs></Blogs>} />
         <Route path="/login" element={<Login></Login>} />
         <Route path="/register" element={<Register></Register>} />
         <Route path="/reset" element={<ResetPassword></ResetPassword>} />

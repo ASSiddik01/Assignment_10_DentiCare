@@ -6,6 +6,7 @@ import banner2 from '../../../images/banner/banner_2.jpg';
 import banner3 from '../../../images/banner/banner_3.jpg';
 
 const Banner = () => {
+  // This is homepage banner page
   return (
     <Carousel fade >
       <Carousel.Item>

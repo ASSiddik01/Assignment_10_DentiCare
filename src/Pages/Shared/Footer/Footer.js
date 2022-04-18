@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Footer.css'
 
 const Footer = () => {
+    // Generate dynamic date
     const today = new Date();
     const year = today.getFullYear();
     return (

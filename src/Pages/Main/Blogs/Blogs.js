@@ -3,6 +3,7 @@ import "./Blogs.css";
 import { Container } from "react-bootstrap";
 
 const Blogs = () => {
+  // This is question and answer page
   return (
     <Container>
       <h1 className=" text-center my-5">Question &#38; Answer</h1>

@@ -9,34 +9,41 @@ import Loading from "../../Loading/Loading";
 
 const Login = () => {
   const navigate = useNavigate();
+
+  // Get react firebase hook for email password login
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-
+  
+  // Get previous location
   let location = useLocation();
-
   let from = location.state?.from?.pathname || "/";
 
+  // Navigate register handle
   const navigateRegister = (event) => {
     navigate("/register");
   };
+  // Navigate reset password handle
   const navigateResetPassword = (event) => {
     navigate("/reset");
   };
 
+  // Handle Login
   const handleLogin = (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
     signInWithEmailAndPassword(email, password);
   };
-
+  // Show spinner when loading
   if (loading) {
     return <Loading></Loading>;
   }
+  // Handle Error
   let errorElement;
   if (error) {
     errorElement = <p className="text-danger">Error: {error?.message} </p>;
   }
+  // Redirect to previous page
   if (user) {
     navigate(from, { replace: true });
   }

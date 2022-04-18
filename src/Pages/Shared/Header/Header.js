@@ -1,17 +1,18 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import "./Header.css";
 import logo from "../../../images/logo.png";
 import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.config";
 import { signOut } from "firebase/auth";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faSignInAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignInAlt, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
+  // Get user for conditinal randering
   const [user] = useAuthState(auth);
 
+  // Handle sign out
   const handleSignOut = () => {
     signOut(auth);
   };
@@ -44,9 +45,10 @@ const Header = () => {
             </Nav.Link>
           </Nav>
           <Nav>
+            {/* Conditinal randering */}
             {user ? (
               <button className="btn" onClick={handleSignOut}>
-                Sign Out <FontAwesomeIcon icon={faSignOutAlt} />
+                Log Out <FontAwesomeIcon icon={faSignOutAlt} />
               </button>
             ) : (
               <Nav.Link eventKey={2} as={Link} to="/login">

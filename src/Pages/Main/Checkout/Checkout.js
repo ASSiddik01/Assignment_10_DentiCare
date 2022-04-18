@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Checkout = () => {
+  // If click place booking show this toast
   const handleOrder = (event) => {
     event.preventDefault();
     toast("Thank you for the booking.");

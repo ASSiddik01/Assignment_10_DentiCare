@@ -1,5 +1,4 @@
 import React from "react";
-import "./SocialLogin.css";
 import google from "../../../../images/social/google.png";
 import github from "../../../../images/social/github.png";
 import {
@@ -11,17 +10,21 @@ import auth from "../../../../firebase.config";
 import Loading from "../../Loading/Loading";
 
 const SocialLogin = () => {
+  // Get react firebase hook for google popup login
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
+  // Get react firebase hook for github popup login
   const [signInWithGithub, githubUser, githubloading, githubError] =
     useSignInWithGithub(auth);
-  const navigate = useNavigate();
-  let location = useLocation();
 
+  const navigate = useNavigate();
+
+  // Get previous location
+  let location = useLocation();
   let from = location.state?.from?.pathname || "/";
 
+  // Handle Error
   let errorElement;
-
   if (googleError || githubError) {
     errorElement = (
       <p className="text-danger">
@@ -30,10 +33,11 @@ const SocialLogin = () => {
     );
   }
 
+  // Show spinner when loading
   if (googleLoading || githubloading) {
     return <Loading></Loading>;
   }
-
+  // Redirect to previous page
   if (googleUser || githubUser) {
     navigate(from, { replace: true });
   }

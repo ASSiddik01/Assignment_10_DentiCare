@@ -9,15 +9,20 @@ import Loading from "../../Loading/Loading";
 import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
+  // Declear state for save checked info for conditinal randering
   const [agree, setAgree] = useState(false);
+
   const navigate = useNavigate();
+  // Get react firebase hook for email password register
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
+  // Navigate register login
   const navigateLogin = (event) => {
     navigate("/login");
   };
 
+  // Handle Register
   const handleRegister = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
@@ -27,10 +32,12 @@ const Register = () => {
     setAgree(false);
   };
 
+  // Show spinner when loading
   if (loading) {
     return <Loading></Loading>;
   }
 
+  // Handle Error
   let errorElement;
   if (error) {
     errorElement = <p className="text-danger">Error: {error?.message} </p>;

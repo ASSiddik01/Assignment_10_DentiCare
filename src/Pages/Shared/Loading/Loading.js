@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 
 const Loading = () => {
   return (
+    // Show the spiner on loading
     <Container>
       <Row>
         <Col md={12} className="text-center mt-5">

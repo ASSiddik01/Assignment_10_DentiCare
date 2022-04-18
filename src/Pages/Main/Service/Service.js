@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Service.css";
 
 const Service = ({ service }) => {
+  // De-structuring
   const { name, price, img, description } = service;
   return (
     <Col>

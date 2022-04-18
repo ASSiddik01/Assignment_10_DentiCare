@@ -7,10 +7,11 @@ import Loading from "../../Loading/Loading";
 import "react-toastify/dist/ReactToastify.css";
 
 const ResetPassword = () => {
+  // Get react firebase hook for reset password
   const [sendPasswordResetEmail, sending, error] =
     useSendPasswordResetEmail(auth);
-  let errorElement;
-
+  
+  // Handle reset password
   const handleResetPassword = async (event) => {
     event.preventDefault();
     const email = event.target.email.value;
@@ -22,9 +23,13 @@ const ResetPassword = () => {
     }
   };
 
+  // Show spinner when sending link
   if (sending) {
     return <Loading></Loading>;
   }
+
+  // Handle Error
+  let errorElement;
   if (error) {
     errorElement = <p className="text-danger">Error: {error?.message}</p>;
   }
@@ -40,7 +45,6 @@ const ResetPassword = () => {
                 name="email"
                 type="email"
                 placeholder="Enter email"
-                required
               />
               <Form.Text className="text-muted">
                 Type your forget account email

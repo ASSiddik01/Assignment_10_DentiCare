@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
-import "./Services.css";
 import Service from "../Service/Service";
 
 const Services = () => {
+  // Decler state
   const [services, setServices] = useState([]);
-
+  // Fetch services data from json file
   useEffect(() => {
     fetch("services.json")
       .then((res) => res.json())
